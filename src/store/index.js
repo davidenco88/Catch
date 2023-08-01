@@ -1,6 +1,6 @@
 import { configureStore } from '@reduxjs/toolkit';
 
-import tripReducer from '../modules/trips/tripsReduxSlice';
+import tripReducer from '../pages/Trips/tripsReduxSlice';
 
 const store = configureStore({
   reducer: {

@@ -17,26 +17,31 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 
+// Import React Router Components
+import { useNavigate } from 'react-router-dom';
+
 const listItems = [
-  { id: 1, icon: <HomeIcon />, label: 'Home' },
-  { id: 2, icon: <LocalShippingIcon />, label: 'Viajes' },
-  { id: 3, icon: <TimeToLeaveIcon />, label: 'Vehiculos' },
-  { id: 4, icon: <HistoryIcon />, label: 'Historial Carga' },
-  { id: 5, icon: <AirlineSeatReclineExtraIcon />, label: 'Conductores' },
-  { id: 6, icon: <StarIcon />, label: 'Catch' },
-  { id: 7, icon: <StarBorderIcon />, label: 'Catch Admin' },
-  { id: 8, icon: <GroupIcon />, label: 'Usuarios' },
-  { id: 9, icon: <SettingsIcon />, label: 'Parametros' }
+  { id: 1, icon: <HomeIcon />, label: 'Home', link: '/' },
+  { id: 2, icon: <LocalShippingIcon />, label: 'Viajes', link: '/trips' },
+  { id: 3, icon: <TimeToLeaveIcon />, label: 'Vehiculos', link: '/vehicles' },
+  { id: 4, icon: <HistoryIcon />, label: 'Historial Carga', link: '/load-history' },
+  { id: 5, icon: <AirlineSeatReclineExtraIcon />, label: 'Conductores', link: '/drivers' },
+  { id: 6, icon: <StarIcon />, label: 'Catch', link: '/catch' },
+  { id: 7, icon: <StarBorderIcon />, label: 'Catch Admin', link: '/catch-admin' },
+  { id: 8, icon: <GroupIcon />, label: 'Usuarios', link: '/users' },
+  { id: 9, icon: <SettingsIcon />, label: 'Parametros', link: '/parameters' }
 ];
 
 export default function Leftbar() {
+  const navigate = useNavigate();
+
   return (
     <Box width={250} p={2} bgcolor="skyblue" sx={{ display: { xs: 'none', sm: 'block' } }}>
       <Box>
         <List>
           {listItems.map((item) => (
             <ListItem key={item.id} disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={() => navigate(item.link)}>
                 <ListItemIcon>{item.icon}</ListItemIcon>
                 <ListItemText primary={item.label} />
               </ListItemButton>
