@@ -4,15 +4,10 @@ import { Typography } from '@mui/material';
 import { Stack } from '@mui/material';
 import { Button } from '@mui/material';
 
-// Import React Router Components
-import { useNavigate } from 'react-router-dom';
-
 // Import Project Components
-import TripsTable from '../../components/TripsTable/TripsTable';
+import TripStepperForm from '../../components/TripStepperForm/TripStepperForm';
 
-export default function Trips() {
-  const navigate = useNavigate();
-
+export default function NewService() {
   return (
     <Box
       flex={1}
@@ -33,13 +28,13 @@ export default function Trips() {
           justifyContent: 'space-between'
         }}>
         <Typography variant="h4" sx={{ fontWeight: 'bold', ml: 2 }}>
-          VIAJES
+          NUEVO SERVICIO
         </Typography>
-        <Button variant="contained" onClick={() => navigate('/trips/new-service')} sx={{ mr: 2 }}>
+        <Button variant="contained" sx={{ mr: 2 }}>
           Nuevo Servicio
         </Button>
       </Stack>
-      <TripsTable />
+      <TripStepperForm />
     </Box>
   );
 }

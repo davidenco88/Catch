@@ -29,7 +29,7 @@ const listItems = [
   { id: 6, icon: <StarIcon />, label: 'Catch', link: '/catch' },
   { id: 7, icon: <StarBorderIcon />, label: 'Catch Admin', link: '/catch-admin' },
   { id: 8, icon: <GroupIcon />, label: 'Usuarios', link: '/users' },
-  { id: 9, icon: <SettingsIcon />, label: 'Parametros', link: '/parameters' }
+  { id: 9, icon: <SettingsIcon />, label: 'Parametros', link: '/trips/new-service' }
 ];
 
 export default function Leftbar() {
