@@ -2,7 +2,6 @@
 import { Box } from '@mui/material';
 import { Typography } from '@mui/material';
 import { Stack } from '@mui/material';
-import { Button } from '@mui/material';
 
 // Import Project Components
 import TripStepperForm from '../../components/TripStepperForm/TripStepperForm';
@@ -30,9 +29,6 @@ export default function NewService() {
         <Typography variant="h4" sx={{ fontWeight: 'bold', ml: 2 }}>
           NUEVO SERVICIO
         </Typography>
-        <Button variant="contained" sx={{ mr: 2 }}>
-          Nuevo Servicio
-        </Button>
       </Stack>
       <TripStepperForm />
     </Box>
